@@ -1,0 +1,74 @@
+﻿@model EmployeeViewModel
+
+
+<form asp-action="Index" asp-controller="Employee" method="post">
+    <div class="mb-3 mt-3">
+        <label for="Title" class="form-label">Title:</label>
+        <select asp-for=Title asp-items="Model.Data" class="form-control"></select>
+    </div>
+    <span asp-validation-for="Title" class="text-danger"></span>
+
+    <div class="mb-3">
+        <label for="FirstName" class="form-label">FirstName:</label>
+        <input type="text" class="form-control" id="FirstName" placeholder="Enter FirstName" asp-for="FirstName">
+    </div>
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+
+    <div class="mb-3 mt-3">
+        <label for="LastName" class="form-label">LastName:</label>
+        <input type="text" class="form-control" id="LastName" placeholder="Enter LastName" asp-for="LastName">
+    </div>
+    <span asp-validation-for="LastName" class="text-danger"></span>
+
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email:</label>
+        <input type="text" class="form-control" id="Email" placeholder="Enter Email" asp-for="Email">
+    </div>
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <div class="mb-3 mt-3">
+        <label for="MobileNo" class="form-label">MobileNo:</label>
+        <input type="MobileNo" class="form-control" id="MobileNo" placeholder="Enter MobileNo" asp-for="MobileNo">
+    </div>
+    <span asp-validation-for="MobileNo" class="text-danger"></span>
+
+    <div class="mb-3 mt-3">
+    <div class="form-Check form-check-inline">
+        <input class="Form-check-input" type="radio" name="Gender" value="Male" asp-for="Gender" />
+        <label class="form-check-label" for="inlineRadio1" >Male</label>
+    </div>
+    <div class="form-Check form-check-inline">
+        <input class="Form-check-input" type="radio" name="Gender" value="Female" asp-for="Gender" />
+        <label class="form-check-label" for="inlineRadio2">Female</label>
+    </div>
+    </div>
+    <span asp-validation-for="Gender" class="text-danger"></span>
+
+    <div class="mb-3 mt-3">
+        <label for="Address1" class="form-label">Address1:</label>
+        <textarea asp-for="Address1" class="form-control"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="Address2" class="form-label">Address2:</label>
+        <textarea asp-for="Address2" class="form-control"></textarea>
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="Password" class="form-label">Password:</label>
+        <input type="Password" class="form-control" placeholder="Enter Password" name="Password">
+    </div>
+    <span asp-validation-for="Password" class="text-danger"></span>
+
+    <div class="mb-3">
+        <label for="ConformePassword" class="form-label">ConformePassword:</label>
+        <input type="ConformePassword" class="form-control" placeholder="Enter ConformePassword" name="ConformePassword">
+    </div>
+    <span asp-validation-for="ConformePassword" class="text-danger"></span>
+
+    <div class="form-check mb-3">
+        <label class="form-check-label" for="flexCheckDefault">
+            AcceptsTerms
+            <input class="form-check-input" type="checkbox" name="remember" id="flexCheckDefault" asp-for="AcceptsTerms">
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
